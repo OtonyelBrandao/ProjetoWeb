@@ -7,8 +7,19 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ProjetoWeb.Data;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace ProjetoWeb
 {
@@ -30,9 +41,21 @@ namespace ProjetoWeb
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
+            //Area para adicionar serviços
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            //Configurações de strings de connexão.
+            ConfigurarContexto<AppDbContext>(services ,"Default");
+            
+        }
+        //Metodo Para Pegar a string de conexão com o nome da string de conexão.
+        private void ConfigurarContexto<T>(IServiceCollection services, string nomeConexao) where T : DbContext
+        {
+            string connectionString = Configuration.GetConnectionString(nomeConexao);
+
+            services.AddDbContext<T>(options =>
+                options.UseSqlServer(connectionString)
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
