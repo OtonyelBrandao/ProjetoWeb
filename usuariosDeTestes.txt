@@ -43,7 +43,7 @@
 	Nome:Vitor;
 	Idade:20;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Vitor@gmail.com;
 	Telefone:99348-1245;
   }
   user{
@@ -51,7 +51,7 @@
 	Nome:Paula;
 	Idade:20;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Paula@gmail.com;
 	Telefone:99545-6616;
   }
   user{
@@ -59,7 +59,7 @@
 	Nome:Gabriela;
 	Idade:20;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Gabriela@hotmail.com;
 	Telefone:99778-5756;
   }
   user{
@@ -67,7 +67,7 @@
 	Nome:Mateus;
 	Idade:20;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Mateus78@hotmail.com;
 	Telefone:99877-7556;
   }
   user{
@@ -75,7 +75,7 @@
 	Nome:Marcos;
 	Idade:20;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Marcos@hotmail.com;
 	Telefone:99677-6556;
   }
   user{
@@ -83,7 +83,7 @@
 	Nome:Jaqueline;
 	Idade:20;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Jaque69@gmail.com;
 	Telefone:99767-5665;
   }
   user{
@@ -91,7 +91,7 @@
 	Nome:Andre;
 	Idade:18;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Andre@gmail.com;
 	Telefone:99565-8908;
   }
   user{
@@ -99,7 +99,7 @@
 	Nome:Raissa;
 	Idade:28;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Rai@gmail.com;
 	Telefone:992618-3245;
   }
   user{
@@ -107,7 +107,7 @@
 	Nome:Pablo;
 	Idade:31;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Pablo@hotmail.com;
 	Telefone:998162-5423;
   }
   user{
@@ -115,7 +115,7 @@
 	Nome:Nilce;
 	Idade:23;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Nil@hotmail.com;
 	Telefone:999862-4532;
   }
   user{
@@ -123,7 +123,7 @@
 	Nome:Lenardo;
 	Idade:25;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Leonardo@hotmail.com;
 	Telefone:999872-7895;
   }
   user{
@@ -131,7 +131,7 @@
 	Nome:Jessica;
 	Idade:29;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Jessi@hotmail.com;
 	Telefone:992789-5987;
   }
   user{
@@ -139,7 +139,7 @@
 	Nome:Fernanda;
 	Idade:27;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Fe2020@hotmail.com;
 	Telefone:992798-5970;
   }
   user{
@@ -147,7 +147,7 @@
 	Nome:Bruno;
 	Idade:19;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Bruno@gmail.com;
 	Telefone:991689-4971;
   }
   user{
@@ -155,6 +155,6 @@
 	Nome:Rebeca;
 	Idade:19;
 	Endereco:RJ,Belford Roxo,Heliópolis,Rua General Miler,12;
-	E-mail:RafaelRV@gmail.com;
+	E-mail:Rebeca@gmail.com;
 	Telefone:994698-3852;
   }
