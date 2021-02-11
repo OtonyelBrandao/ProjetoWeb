@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "d3xURqNTaF9EtPeGqRfazu/Swi77H9hmz2EvqqGt+WOGAFwqTqTs2+DBLuJO47Be35NDlqCVAqI7FmioxBruBw==",
+  "dgSpecHash": "WltqayDN2JjPEUY9PUBhfBwva8kaCnuqel81lu3sKIEgElvqCv8jBawxOKErbuj/rwexsCEaarctpf9SYOpPuw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
   "expectedPackageFiles": [
@@ -106,9 +106,9 @@
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.codeanalysis.razor\\2.2.0\\microsoft.codeanalysis.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.1.0\\microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
-    "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.entityframeworkcore\\2.2.0\\microsoft.entityframeworkcore.2.2.0.nupkg.sha512",
-    "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\2.2.0\\microsoft.entityframeworkcore.abstractions.2.2.0.nupkg.sha512",
-    "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\2.2.0\\microsoft.entityframeworkcore.analyzers.2.2.0.nupkg.sha512",
+    "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.entityframeworkcore\\2.2.6\\microsoft.entityframeworkcore.2.2.6.nupkg.sha512",
+    "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\2.2.6\\microsoft.entityframeworkcore.abstractions.2.2.6.nupkg.sha512",
+    "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\2.2.6\\microsoft.entityframeworkcore.analyzers.2.2.6.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.entityframeworkcore.design\\2.2.0\\microsoft.entityframeworkcore.design.2.2.0.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\2.2.0\\microsoft.entityframeworkcore.inmemory.2.2.0.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\2.2.0\\microsoft.entityframeworkcore.relational.2.2.0.nupkg.sha512",
@@ -168,6 +168,7 @@
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.identitymodel.tokens.saml\\5.3.0\\microsoft.identitymodel.tokens.saml.5.3.0.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.identitymodel.xml\\5.3.0\\microsoft.identitymodel.xml.5.3.0.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.net.sdk.razor\\2.2.0\\microsoft.net.sdk.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.netcore.app\\2.2.0\\microsoft.netcore.app.2.2.0.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.2.0\\microsoft.netcore.dotnetapphost.2.2.0.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.2.0\\microsoft.netcore.dotnethostpolicy.2.2.0.nupkg.sha512",

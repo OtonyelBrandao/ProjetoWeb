@@ -34,6 +34,7 @@ namespace ProjetoWeb.Data
                 etd.Property(t => t.ID).HasColumnName("ID").ValueGeneratedOnAdd();
                 etd.Property(t => t.Nome).HasColumnName("nome").HasMaxLength(100);
                 etd.Property(t => t.Titulo).HasColumnName("titulo").HasMaxLength(30);
+                etd.Property(t => t.Nascimento).HasColumnName("nascimento").HasMaxLength(200);
                 etd.Property(t => t.Email).HasColumnName("email").HasMaxLength(75);
                 etd.Property(t => t.Tell).HasColumnName("tell").HasMaxLength(15);
                 etd.Property(t => t.Endereco).HasColumnName("endereco").HasMaxLength(300);
