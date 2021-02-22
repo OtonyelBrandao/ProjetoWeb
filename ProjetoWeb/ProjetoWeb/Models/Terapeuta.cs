@@ -15,10 +15,10 @@ namespace ProjetoWeb.Models
         [Required]
         public string Email { get; set; }
         [Required]
-        public string Tell { get; set; }
+        public string Telefone { get; set; }
         [Required]
         public string Endereco { get; set; }
         [Required]
-        public int Ativo { get; set; }
+        public DateTime Nascimento { get; set; }
     }
 }
