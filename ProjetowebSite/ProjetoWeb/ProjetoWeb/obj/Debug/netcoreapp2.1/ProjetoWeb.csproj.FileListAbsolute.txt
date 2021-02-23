@@ -30,3 +30,4 @@ C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\Proj
 C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.dll
 C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.pdb
 C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.csproj.CopyComplete
+C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\BuscaTerapeutas\Busca.g.cshtml.cs

@@ -1,0 +1,37 @@
+﻿@model IList<ProjetoWeb.Models.Terapeutas>
+@{
+    ViewData["Title"] = "Busca";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form>
+            <input />
+            <input />
+            <input />
+        </form>
+    </div>
+    <div class="col-md-6">
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-md-3">
+                    <img />
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <h5>Titulo</h5>
+                    </div>
+                    <div class="row">
+                        <label>Nome :</label>@item.Nome<br />
+                        <label>Email :</label>@item.Email<br />
+                        <label>Nascimento :</label>@item.Nascimento<br />
+                        <label>Endereço :</label>@item.Endereco<br />
+                        <label>Telefone :</label>@item.Telefone
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

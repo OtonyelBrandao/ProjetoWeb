@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProjetoWeb.Data;
+using ProjetoWeb.Repository;
 
 namespace ProjetoWeb
 {
@@ -30,12 +31,16 @@ namespace ProjetoWeb
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
+
                 options.MinimumSameSitePolicy = SameSiteMode.None;
+                services.AddSingleton<IConfiguration>(Configuration);
+                services.AddTransient<ITerapeutasReporitory, TerapeutasRepository>();
             });
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             ConfigurarContexto<AplicationDbContext>(services, "Default");
+
         }
         private void ConfigurarContexto<T>(IServiceCollection services, string nomeConexao) where T : DbContext
         {
@@ -66,7 +71,7 @@ namespace ProjetoWeb
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=BuscaTerapeutas}/{action=Busca}/{id?}");
             });
         }
     }
