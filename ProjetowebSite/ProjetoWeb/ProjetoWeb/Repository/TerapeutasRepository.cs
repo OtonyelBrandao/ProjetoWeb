@@ -17,6 +17,12 @@ namespace ProjetoWeb.Repository
         {
             _configuration = configuration;
         }
+
+        public TerapeutasRepository(AplicationDbContext db)
+        {
+            this.db = db;
+        }
+
         public string GetConnection()
         {
             var connection = _configuration.

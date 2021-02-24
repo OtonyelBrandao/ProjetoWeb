@@ -33,13 +33,16 @@ namespace ProjetoWeb
                 options.CheckConsentNeeded = context => true;
 
                 options.MinimumSameSitePolicy = SameSiteMode.None;
-                services.AddSingleton<IConfiguration>(Configuration);
-                services.AddTransient<ITerapeutasReporitory, TerapeutasRepository>();
+                
             });
 
+            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddTransient<ITerapeutasReporitory, TerapeutasRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             ConfigurarContexto<AplicationDbContext>(services, "Default");
+
+            //services.AddScoped<>
 
         }
         private void ConfigurarContexto<T>(IServiceCollection services, string nomeConexao) where T : DbContext

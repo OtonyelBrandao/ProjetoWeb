@@ -31,3 +31,39 @@ C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\Proj
 C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.pdb
 C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.csproj.CopyComplete
 C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\BuscaTerapeutas\Busca.g.cshtml.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\bin\Debug\netcoreapp2.1\ProjetoWeb.deps.json
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\bin\Debug\netcoreapp2.1\ProjetoWeb.runtimeconfig.json
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\bin\Debug\netcoreapp2.1\ProjetoWeb.runtimeconfig.dev.json
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\bin\Debug\netcoreapp2.1\ProjetoWeb.dll
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\bin\Debug\netcoreapp2.1\ProjetoWeb.pdb
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\bin\Debug\netcoreapp2.1\ProjetoWeb.Views.dll
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\bin\Debug\netcoreapp2.1\ProjetoWeb.Views.pdb
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.csprojAssemblyReference.cache
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.AssemblyInfoInputs.cache
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.AssemblyInfo.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.csproj.CoreCompileInputs.cache
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.RazorAssemblyInfo.cache
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.RazorAssemblyInfo.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.TagHelpers.input.cache
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.TagHelpers.output.cache
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.RazorCoreGenerate.cache
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\BuscaTerapeutas\Busca.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.RazorTargetAssemblyInfo.cache
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.RazorTargetAssemblyInfo.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.Views.pdb
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.dll
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.pdb
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.genruntimeconfig.cache
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.csproj.CopyComplete
