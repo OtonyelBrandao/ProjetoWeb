@@ -74,7 +74,7 @@ namespace ProjetoWeb
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=BuscaTerapeutas}/{action=Busca}/{id?}");
+                    template: "{controller=BuscaTerapeutas}/{action=Principal}/{id?}");
             });
         }
     }

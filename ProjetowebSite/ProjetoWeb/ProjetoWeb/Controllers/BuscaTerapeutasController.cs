@@ -16,9 +16,19 @@ namespace ProjetoWeb.Controllers
             TerapeutasReporitory = terapeutasReporitory;
         }
 
-        public IActionResult Busca()
+        public IActionResult Principal()
         {
             return View(TerapeutasReporitory.GetTerapeutas());
+        }
+
+        public IActionResult Cadastro()
+        {
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
         }
     }
 }

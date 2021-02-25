@@ -1,93 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using ProjetoWeb.Data;
 using ProjetoWeb.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjetoWeb.Repository
 {
     public class TerapeutasRepository : ITerapeutasReporitory
     {
-        IConfiguration _configuration;
-        AplicationDbContext db;
-        public TerapeutasRepository(IConfiguration configuration , AplicationDbContext db)
+        private IConfiguration _configuration; /*<-- Declaração do IConfiguration*/
+        private AplicationDbContext db; /*<-- Declaração do contexto*/
+
+        //Construtor ---
+        public TerapeutasRepository(IConfiguration configuration, AplicationDbContext db)
         {
             _configuration = configuration;
             this.db = db;
         }
-        public string GetConnection()
-        {
-            var connection = _configuration.
-                GetSection("ConnectionStrings").
-                GetSection("Default").
-                Value;
-            return connection;
-        }
-        public int Add(Terapeutas terapeutas)
-        {
-            var connectionString = this.GetConnection();
-            int count = 0;
-            using (var con = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    con.Open();
-                    var query = "INSERT INTO Terapeutas(Nome, Endereco, Email, Telefone, Nascimento) VALUES(@Terapeutas.Nome, @Terapeutas.Endereco, @Terapeutas.Email, @Terapeutas.Telefone ,@Terapeutas.Nascimento); SELECT CAST(SCOPE_IDENTITY() as INT); ";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    count = cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-                finally
-                {
-                    con.Close();
-                }
-                return count;
-            }
-        }
+        //Construtor ---
 
-        public int Delete(int Id)
+        //CRUD --- --- --- ---
+        public void Add(Terapeutas terapeutas)
         {
-            return 1;
+            //string query = "INSERT INTO Terapeutas(Nome, Endereco, Email, Telefone, Nascimento) VALUES(@Terapeutas.Nome, @Terapeutas.Endereco, @Terapeutas.Email, @Terapeutas.Telefone ,@Terapeutas.Nascimento); SELECT CAST(SCOPE_IDENTITY() as INT); ";
+            //SqlCommand cmd = new SqlCommand(query, con);
         }
-
-        public int Edit(Terapeutas terapeutas)
+        public void Delete(int Id)
         {
-            return 1;
+            Terapeutas terapeuta = db.Terapeutas.Find(Id);
         }
-
+        public void Edit(Terapeutas terapeutas)
+        {
+        }
         public Terapeutas Get(int Id)
         {
             throw new NotImplementedException();
         }
-
         public List<Terapeutas> GetTerapeutas()
         {
-            var connectionString = this.GetConnection();
-            
-            using (var con = new SqlConnection(connectionString))
-            {
-                var Resultado = new List<Terapeutas>();
-                try
-                {
-                    var terapeuta = db.Terapeutas.ToList<Terapeutas>();
-                    Resultado = terapeuta;
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-                finally
-                {
-                    con.Close();
-                }
-                return Resultado;
-            }
+            List<Terapeutas> Resultado = new List<Terapeutas>();
+            List<Terapeutas> terapeuta = db.Terapeutas.ToList<Terapeutas>();
+            Resultado = terapeuta;
+            return Resultado;
         }
+        public List<Terapeutas> GetTerapeutas(string Profissao, string Endereco)
+        {
+            List<Terapeutas> Resultado = new List<Terapeutas>();
+            List<Terapeutas> terapeuta = db.Terapeutas.Where(T => T.Endereco == Endereco).ToList<Terapeutas>();
+            Resultado = terapeuta;
+            return Resultado;
+        }
+        //CRUD --- --- --- ---
     }
 }

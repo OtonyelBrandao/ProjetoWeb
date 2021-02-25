@@ -8,11 +8,12 @@ namespace ProjetoWeb.Repository
 {
     public interface ITerapeutasReporitory
     {
-        int Add(Terapeutas terapeutas);
+        void Add(Terapeutas terapeutas);
         List<Terapeutas> GetTerapeutas();
+        List<Terapeutas> GetTerapeutas(string Profissao ,string Endereco);
         Terapeutas Get(int Id);
-        int Edit(Terapeutas terapeutas);
-        int Delete(int Id);
+        void Edit(Terapeutas terapeutas);
+        void Delete(int Id);
 
     }
 }
