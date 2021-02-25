@@ -13,16 +13,11 @@ namespace ProjetoWeb.Repository
     {
         IConfiguration _configuration;
         AplicationDbContext db;
-        public TerapeutasRepository(IConfiguration configuration)
+        public TerapeutasRepository(IConfiguration configuration , AplicationDbContext db)
         {
             _configuration = configuration;
-        }
-
-        public TerapeutasRepository(AplicationDbContext db)
-        {
             this.db = db;
         }
-
         public string GetConnection()
         {
             var connection = _configuration.

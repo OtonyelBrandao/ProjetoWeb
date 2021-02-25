@@ -39,14 +39,17 @@
     </nav>
 
     <partial name="_CookieConsentPartial" />
-
-    <div class="container body-content">
+    @*container body-content*@
+    <div>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2021 - ProjetoWeb</p>
-        </footer>
+
     </div>
+    
+        <footer class="panel-footer">
+            <p style="text-align:center;">&copy; @DateTime.Now.Year - ProjetoWeb</p>
+        </footer>
+    
+
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
