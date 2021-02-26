@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProjetoWeb.Repository
 {
-    public interface ITerapeutasReporitory
+    public interface IProfissionaisReporitory
     {
-        void Add(Terapeutas terapeutas);
-        List<Terapeutas> GetTerapeutas();
-        List<Terapeutas> GetTerapeutas(string Profissao ,string Endereco);
-        Terapeutas Get(int Id);
-        void Edit(Terapeutas terapeutas);
+        void Add(Profissionais profissionais);
+        List<Profissionais> GetProfissionais();
+        List<Profissionais> GetProfissionais(string Profissao ,string Endereco);
+        Profissionais Get(int Id);
+        void Edit(Profissionais profissionais);
         void Delete(int Id);
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoWeb.Models
 {
-    public class Terapeutas : BaseModel
+    public class Profissionais : BaseModel
     {
 
         [Required]
@@ -14,9 +14,9 @@ namespace ProjetoWeb.Models
         [Required]
         public string Endereco { get; set; }
         [Required]
-        public string Email { get; set; }
-        [Required]
         public string Telefone { get; set; }
+        [Required]
+        public string WhatsApp { get; set; }
         [Required]
         public DateTime Nascimento { get; set;}
     }
