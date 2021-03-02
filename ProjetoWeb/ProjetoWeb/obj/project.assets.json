@@ -12569,11 +12569,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ccpus\\OneDrive\\Área de Trabalho\\Otonyel2\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
+      "projectUniqueName": "C:\\Users\\ccpus\\OneDrive\\Área de Trabalho\\Otonyel2\\ProjetoWebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
       "projectName": "ProjetoWeb",
-      "projectPath": "C:\\Users\\ccpus\\OneDrive\\Área de Trabalho\\Otonyel2\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
+      "projectPath": "C:\\Users\\ccpus\\OneDrive\\Área de Trabalho\\Otonyel2\\ProjetoWebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
       "packagesPath": "C:\\Users\\ccpus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ccpus\\OneDrive\\Área de Trabalho\\Otonyel2\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\obj\\",
+      "outputPath": "C:\\Users\\ccpus\\OneDrive\\Área de Trabalho\\Otonyel2\\ProjetoWebSite\\ProjetoWeb\\ProjetoWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
