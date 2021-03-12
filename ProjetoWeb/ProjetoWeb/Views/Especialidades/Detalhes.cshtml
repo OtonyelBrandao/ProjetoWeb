@@ -1,0 +1,30 @@
+﻿@model ProjetoWeb.Models.Especialidades
+
+@{
+    ViewData["Title"] = "Especialidades - Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Especialidades</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeDaEspecialidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeDaEspecialidade)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Atualizar" asp-route-id="@Model.ID">Editar</a> |
+    <a asp-action="Lista">Voltar a Lista</a>
+</div>

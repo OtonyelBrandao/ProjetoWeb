@@ -11,15 +11,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProjetoWeb.Data;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using System;
 using System.IdentityModel.Tokens.Jwt;
+using ProjetoWeb.Repository;
 
 namespace ProjetoWeb
 {
@@ -43,21 +36,14 @@ namespace ProjetoWeb
             });
             //Area para adicionar serviços
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-            //Configurações de strings de connexão.
-            ConfigurarContexto<AppDbContext>(services ,"Default");
-            
+            //Serviços transitorios
+            services.AddTransient<IEspecialidadesRepository, EspecialidadesRepository>();
+            services.AddTransient<IProfissionaisRepository, ProfissionaisRepository>();
+            //Serviço de Contexto
+            string connectionString = Configuration.GetConnectionString("Default");
+            services.AddDbContext<AppDbContext>(options => 
+            options.UseSqlServer(connectionString));
         }
-        //Metodo Para Pegar a string de conexão com o nome da string de conexão.
-        private void ConfigurarContexto<T>(IServiceCollection services, string nomeConexao) where T : DbContext
-        {
-            string connectionString = Configuration.GetConnectionString(nomeConexao);
-
-            services.AddDbContext<T>(options =>
-                options.UseSqlServer(connectionString)
-            );
-        }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -80,7 +66,7 @@ namespace ProjetoWeb
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Especialidades}/{action=Lista}/{id?}");
             });
         }
     }

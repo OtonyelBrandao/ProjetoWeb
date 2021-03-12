@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProjetoWeb.Models.Especialidades>
+
+@{
+    ViewData["Title"] = "Especialidades - Lista";
+}
+
+<h1>Especialidades</h1>
+
+<p>
+    <a asp-action="Cadastro">Nova Especialidade</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeDaEspecialidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeDaEspecialidade)
+            </td>
+            <td>
+                <a asp-action="Atualizar" asp-route-id="@item.ID">Editar</a> |
+                <a asp-action="Detalhes" asp-route-id="@item.ID">Detalhes</a> |
+                <a asp-action="Deletar" asp-route-id="@item.ID">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
