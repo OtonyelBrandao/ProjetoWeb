@@ -19,17 +19,65 @@ namespace ProjetoWeb.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ProjetoWeb.Models.Terapeutas", b =>
+            modelBuilder.Entity("ProjetoWeb.Models.Especialidades", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email")
+                    b.Property<int>("Codigo");
+
+                    b.Property<string>("NomeDaEspecialidade")
                         .IsRequired();
 
-                    b.Property<string>("Endereco")
+                    b.Property<int?>("ProfissionaisId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfissionaisId");
+
+                    b.ToTable("especialidades");
+                });
+
+            modelBuilder.Entity("ProjetoWeb.Models.Logradouro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Bairro")
                         .IsRequired();
+
+                    b.Property<string>("CEP")
+                        .IsRequired()
+                        .HasMaxLength(8);
+
+                    b.Property<string>("Cidade")
+                        .IsRequired();
+
+                    b.Property<string>("Complemento")
+                        .IsRequired();
+
+                    b.Property<string>("Rua")
+                        .IsRequired();
+
+                    b.Property<string>("UF")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Logradouro");
+                });
+
+            modelBuilder.Entity("ProjetoWeb.Models.Profissionais", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("EspecialidadeIDId");
+
+                    b.Property<int>("LogradouroId");
 
                     b.Property<DateTime>("Nascimento");
 
@@ -39,9 +87,29 @@ namespace ProjetoWeb.Migrations
                     b.Property<string>("Telefone")
                         .IsRequired();
 
+                    b.Property<string>("WhatsApp")
+                        .IsRequired();
+
                     b.HasKey("Id");
 
-                    b.ToTable("Terapeutas");
+                    b.HasIndex("EspecialidadeIDId");
+
+                    b.ToTable("Profissionais");
+                });
+
+            modelBuilder.Entity("ProjetoWeb.Models.Especialidades", b =>
+                {
+                    b.HasOne("ProjetoWeb.Models.Profissionais")
+                        .WithMany("Especialidades")
+                        .HasForeignKey("ProfissionaisId");
+                });
+
+            modelBuilder.Entity("ProjetoWeb.Models.Profissionais", b =>
+                {
+                    b.HasOne("ProjetoWeb.Models.Especialidades", "EspecialidadeID")
+                        .WithMany()
+                        .HasForeignKey("EspecialidadeIDId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

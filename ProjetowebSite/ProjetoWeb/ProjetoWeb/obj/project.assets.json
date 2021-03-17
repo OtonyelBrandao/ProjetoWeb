@@ -12563,23 +12563,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ccpus\\.nuget\\packages\\": {},
+    "C:\\Users\\ccp3\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ccpus\\OneDrive\\Área de Trabalho\\Otonyel2\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
+      "projectUniqueName": "D:\\Otonyel\\Repositorios\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
       "projectName": "ProjetoWeb",
-      "projectPath": "C:\\Users\\ccpus\\OneDrive\\Área de Trabalho\\Otonyel2\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
-      "packagesPath": "C:\\Users\\ccpus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ccpus\\OneDrive\\Área de Trabalho\\Otonyel2\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\obj\\",
+      "projectPath": "D:\\Otonyel\\Repositorios\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
+      "packagesPath": "C:\\Users\\ccp3\\.nuget\\packages\\",
+      "outputPath": "D:\\Otonyel\\Repositorios\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ccpus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ccp3\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

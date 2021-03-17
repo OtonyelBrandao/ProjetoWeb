@@ -1,13 +1,25 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using ProjetoWeb.Data;
 using ProjetoWeb.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ProjetoWeb.Repository
 {
-    public class ProfissionaisRepository : IProfissionaisReporitory
+    public interface IProfissionaisRepository
+    {
+        void Add(Profissionais profissionais);
+        List<Profissionais> GetProfissionais();
+        List<Profissionais> GetProfissionais(string Profissao, string Endereco);
+        Profissionais Get(int Id);
+        void Edit(Profissionais profissionais);
+        void Delete(int Id);
+
+    }
+    public class ProfissionaisRepository : IProfissionaisRepository
     {
         private IConfiguration _configuration; /*<-- Declaração do IConfiguration*/
         private AplicationDbContext db; /*<-- Declaração do contexto*/
@@ -38,18 +50,16 @@ namespace ProjetoWeb.Repository
         {
             throw new NotImplementedException();
         }
-        public List<Profissionais> GetProfissionais()
+        public async Task<List<Profissionais>> GetProfissionais()
         {
-            List<Profissionais> Resultado = new List<Profissionais>();
-            List<Profissionais> profissional = db.profissionais.ToList<Profissionais>();
-            Resultado = profissional;
-            return Resultado;
+            var ListaDeProfissionais = await db.profissionais.ToListAsync();
+            return ListaDeProfissionais;
         }
         public List<Profissionais> GetProfissionais(string Especialidade, string Endereco)
         {
             List<Profissionais> Resultado = new List<Profissionais>();
-            List<Profissionais> profissional = db.profissionais.Where(T => T.Endereco == Endereco).ToList<Profissionais>();
-            Resultado = profissional;
+            //List<Profissionais> profissional = db.profissionais.Where(T => T.Endereco == Endereco).ToList<Profissionais>();
+            //Resultado = profissional;
             return Resultado;
         }
         //CRUD --- --- --- ---

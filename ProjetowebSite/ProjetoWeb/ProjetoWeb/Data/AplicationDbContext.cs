@@ -28,23 +28,10 @@ namespace ProjetoWeb.Data
             //});
 
         }
-        private void ConfiguraTerapeuta(ModelBuilder construtorDeModelos)
-        {
-            construtorDeModelos.Entity<Profissionais>(etd =>
-            {
-                etd.ToTable("tbCliente");
-                etd.HasKey(t => t.Id).HasName("ID");
-                etd.Property(t => t.Id).HasColumnName("ID").ValueGeneratedOnAdd();
-                etd.Property(t => t.Nome).HasColumnName("Nome").HasMaxLength(100);
-                etd.Property(t => t.Telefone).HasColumnName("Telefone").HasMaxLength(15);
-                etd.Property(t => t.Endereco).HasColumnName("Endereco").HasMaxLength(300);
-                etd.Property(t => t.Nascimento).HasColumnName("Nascimento");
-                etd.Property(t => t.WhatsApp).HasColumnName("WhatsApp");
-            });
-        }
+        
         //public DbSet<Terapeuta> Terapeutas { get; set;}
         public DbSet<Profissionais> profissionais { get; set; }
-        //Area dos CRUDs inicio
-        //Area dos CRUDs fim
+        public DbSet<Logradouro> logradouro { get; set; }
+        public DbSet<Especialidades> especialidades { get; set; }
     }
 }
