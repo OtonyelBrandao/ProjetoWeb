@@ -1,4 +1,5 @@
-﻿using ProjetoWeb.Models;
+﻿using ProjetoWeb.Data;
+using ProjetoWeb.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,16 @@ namespace ProjetoWeb.Repository
     }
     public class EspecialidadesRepository : IEspecialidadesRepository
     {
+        //Implementação de Dependeincia da classe AplicationDbContext
+        //que serve como persistencia a dados
+        private readonly AplicationDbContext DB;
+        //Construtor
+        public EspecialidadesRepository(AplicationDbContext dB)
+        {
+            DB = dB;
+        }
+        //Construtor
+        //CRUD INICIO
         public void Add(Especialidades Especialidades)
         {
             throw new NotImplementedException();
@@ -47,5 +58,6 @@ namespace ProjetoWeb.Repository
         {
             throw new NotImplementedException();
         }
+        //CRUD FIM
     }
 }

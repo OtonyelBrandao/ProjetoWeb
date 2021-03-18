@@ -12,56 +12,70 @@ namespace ProjetoWeb.Repository
     public interface IProfissionaisRepository
     {
         void Add(Profissionais profissionais);
-        List<Profissionais> GetProfissionais();
-        List<Profissionais> GetProfissionais(string Profissao, string Endereco);
-        Profissionais Get(int Id);
-        void Edit(Profissionais profissionais);
+        Task<List<Profissionais>> GetProfissionais();
+        Task<List<Profissionais>> GetProfissionais(string Profissao, string Endereco);
+        Task<Profissionais> Get(int? Id);
+        Task<string> Edit(Profissionais profissionais);
         void Delete(int Id);
 
     }
     public class ProfissionaisRepository : IProfissionaisRepository
     {
-        private IConfiguration _configuration; /*<-- Declaração do IConfiguration*/
+        //Implementação de Dependeincia da classe AplicationDbContext
+        //que serve como persistencia a dados
         private AplicationDbContext db; /*<-- Declaração do contexto*/
 
         //Construtor ---
-        public ProfissionaisRepository(IConfiguration configuration, AplicationDbContext db)
+        public ProfissionaisRepository( AplicationDbContext db)
         {
-            _configuration = configuration;
             this.db = db;
         }
         //Construtor ---
 
-        //CRUD --- --- --- ---
-        public void Add(Profissionais profissionais)
+        //CRUD INICIO
+        public async void Add(Profissionais profissionais)
         {
-            //string query = "INSERT INTO Terapeutas(Nome, Endereco, Email, Telefone, Nascimento) VALUES(@Terapeutas.Nome, @Terapeutas.Endereco, @Terapeutas.Email, @Terapeutas.Telefone ,@Terapeutas.Nascimento); SELECT CAST(SCOPE_IDENTITY() as INT); ";
-            //SqlCommand cmd = new SqlCommand(query, con);
+            db.Add(profissionais);
+            await db.SaveChangesAsync();
         }
-        public void Delete(int Id)
+        public async void Delete(int Id)
         {
-            Profissionais profissional = db.profissionais.Find(Id);
+            var profissionais = await db.profissionais.FindAsync(Id);
+            db.profissionais.Remove(profissionais);
+            await db.SaveChangesAsync();
+        }
+        public async Task<string> Edit(Profissionais profissionais)
+        {
+            try
+            {
+                db.Update(profissionais);
+                await db.SaveChangesAsync();
+                return "1";
+            }
+            catch (DbUpdateConcurrencyException e)
+            {
+                throw e;
+            }
             
         }
-        public void Edit(Profissionais profissionais)
+        public async Task<Profissionais> Get(int? Id)
         {
-        }
-        public Profissionais Get(int Id)
-        {
-            throw new NotImplementedException();
+            var profissionais = await db.profissionais
+                .FirstOrDefaultAsync(m => m.Id == Id);
+            return profissionais;
         }
         public async Task<List<Profissionais>> GetProfissionais()
         {
             var ListaDeProfissionais = await db.profissionais.ToListAsync();
             return ListaDeProfissionais;
         }
-        public List<Profissionais> GetProfissionais(string Especialidade, string Endereco)
+        public async Task<List<Profissionais>> GetProfissionais(string Especialidade, string Endereco)
         {
             List<Profissionais> Resultado = new List<Profissionais>();
             //List<Profissionais> profissional = db.profissionais.Where(T => T.Endereco == Endereco).ToList<Profissionais>();
             //Resultado = profissional;
             return Resultado;
         }
-        //CRUD --- --- --- ---
+        //CRUD FIM
     }
 }

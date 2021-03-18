@@ -12569,11 +12569,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Otonyel\\Repositorios\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
+      "projectUniqueName": "D:\\Otonyel\\Repositorios\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
       "projectName": "ProjetoWeb",
-      "projectPath": "D:\\Otonyel\\Repositorios\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
+      "projectPath": "D:\\Otonyel\\Repositorios\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
       "packagesPath": "C:\\Users\\ccp3\\.nuget\\packages\\",
-      "outputPath": "D:\\Otonyel\\Repositorios\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\obj\\",
+      "outputPath": "D:\\Otonyel\\Repositorios\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

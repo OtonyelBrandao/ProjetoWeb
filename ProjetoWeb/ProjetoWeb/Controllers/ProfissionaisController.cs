@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ProjetoWeb.Data;
 using ProjetoWeb.Models;
+using ProjetoWeb.Models.ModelView;
 using ProjetoWeb.Repository;
 
 namespace ProjetoWeb.Controllers
@@ -25,7 +26,7 @@ namespace ProjetoWeb.Controllers
         // GET: Profissionais
         public async Task<IActionResult> Inicio()
         {
-            return View(profissionaisRepository.GetProfissionais());
+            return View(await profissionaisRepository.GetProfissionais());
         }
 
         // GET: Profissionais/Details/5
@@ -35,9 +36,9 @@ namespace ProjetoWeb.Controllers
             {
                 return NotFound();
             }
-
-            var profissionais = await _context.profissionais
-                .FirstOrDefaultAsync(m => m.Id == id);
+            int Id = Convert.ToInt32(id);
+            var profissionais = await profissionaisRepository.Get(Id);
+            
             if (profissionais == null)
             {
                 return NotFound();
@@ -57,12 +58,24 @@ namespace ProjetoWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Cadastro([Bind("Nome,Endereco,Telefone,WhatsApp,Nascimento,Id")] Profissionais profissionais)
+        public async Task<IActionResult> Cadastro([Bind("Nome,Logradouro,Telefone,WhatsApp,Nascimento,Id,EspecialidadesID")] LogradouroProfissionais logradouroProfissionais)
         {
+            //inicialização de instancias
+            Profissionais profissionais = new Profissionais();
+            Logradouro logradouro = new Logradouro();
+            //----------------------------
+            
+            //----------------------------
+
+            profissionais.EspecialidadeID = logradouroProfissionais.EspecialidadesID;
+            profissionais.Nome = logradouroProfissionais.Nome;
+            profissionais.Nascimento = logradouroProfissionais.Nascimento;
+            profissionais.Telefone = logradouroProfissionais.Telefone;
+            profissionais.WhatsApp = logradouroProfissionais.WhatsApp;
+
             if (ModelState.IsValid)
             {
-                _context.Add(profissionais);
-                await _context.SaveChangesAsync();
+                profissionaisRepository.Add(profissionais);
                 return RedirectToAction(nameof(Inicio));
             }
             return View(profissionais);
@@ -100,8 +113,7 @@ namespace ProjetoWeb.Controllers
             {
                 try
                 {
-                    _context.Update(profissionais);
-                    await _context.SaveChangesAsync();
+                    await profissionaisRepository.Edit(profissionais);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -127,8 +139,7 @@ namespace ProjetoWeb.Controllers
                 return NotFound();
             }
 
-            var profissionais = await _context.profissionais
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var profissionais = await profissionaisRepository.Get(id);
             if (profissionais == null)
             {
                 return NotFound();
@@ -142,9 +153,7 @@ namespace ProjetoWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeletarConfirmado(int id)
         {
-            var profissionais = await _context.profissionais.FindAsync(id);
-            _context.profissionais.Remove(profissionais);
-            await _context.SaveChangesAsync();
+            profissionaisRepository.Delete(id);
             return RedirectToAction(nameof(Inicio));
         }
 

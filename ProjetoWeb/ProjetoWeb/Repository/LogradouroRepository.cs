@@ -1,4 +1,5 @@
-﻿using ProjetoWeb.Models;
+﻿using ProjetoWeb.Data;
+using ProjetoWeb.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,16 @@ namespace ProjetoWeb.Repository
     }
     public class LogradouroRepository : ILogradouroRepository
     {
+        //Implementação de Dependeincia da classe AplicationDbContext
+        //que serve como persistencia a dados
+        private readonly AplicationDbContext db;
+        //Construtor
+        public LogradouroRepository(AplicationDbContext db)
+        {
+            this.db = db;
+        }
+        //Construtor
+        //CRUD INICIO
         public void Add(Logradouro logradouro)
         {
             throw new NotImplementedException();
@@ -49,5 +60,6 @@ namespace ProjetoWeb.Repository
         {
             throw new NotImplementedException();
         }
+        //CRUD FIM
     }
 }
