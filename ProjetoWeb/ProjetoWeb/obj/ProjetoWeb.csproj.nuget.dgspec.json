@@ -1,20 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj": {}
+    "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj": {
+    "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
         "projectName": "ProjetoWeb",
-        "projectPath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
+        "projectPath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb.csproj",
         "packagesPath": "C:\\Users\\Otonyel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetoWeb\\ProjetoWeb\\obj\\",
+        "outputPath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Otonyel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,15 +23,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
-            "targetAlias": "netcoreapp2.2",
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
             "projectReferences": {}
           }
         },
@@ -41,25 +42,43 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
-          "targetAlias": "netcoreapp2.2",
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "dependencies": {
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.0, )",
+              "version": "[2.1.1, )",
               "autoReferenced": true
             },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.1.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.14, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.0, )",
+              "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
             }
           },
           "imports": [

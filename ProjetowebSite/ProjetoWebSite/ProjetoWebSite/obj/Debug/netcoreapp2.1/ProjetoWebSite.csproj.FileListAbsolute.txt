@@ -1,8 +1,0 @@
-C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWebSite\ProjetoWebSite\obj\Debug\netcoreapp2.1\ProjetoWebSite.csprojAssemblyReference.cache
-C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWebSite\ProjetoWebSite\obj\Debug\netcoreapp2.1\ProjetoWebSite.csproj.CoreCompileInputs.cache
-C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWebSite\ProjetoWebSite\obj\Debug\netcoreapp2.1\ProjetoWebSite.RazorAssemblyInfo.cache
-C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWebSite\ProjetoWebSite\obj\Debug\netcoreapp2.1\ProjetoWebSite.RazorAssemblyInfo.cs
-C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWebSite\ProjetoWebSite\obj\Debug\netcoreapp2.1\ProjetoWebSite.AssemblyInfoInputs.cache
-C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWebSite\ProjetoWebSite\obj\Debug\netcoreapp2.1\ProjetoWebSite.AssemblyInfo.cs
-C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWebSite\ProjetoWebSite\obj\Debug\netcoreapp2.1\ProjetoWebSite.dll
-C:\Users\ccpus\OneDrive\Área de Trabalho\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWebSite\ProjetoWebSite\obj\Debug\netcoreapp2.1\ProjetoWebSite.pdb

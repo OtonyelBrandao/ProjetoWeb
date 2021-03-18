@@ -11,15 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProjetoWeb.Data;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using System;
-using System.IdentityModel.Tokens.Jwt;
+using ProjetoWeb.Repository;
 
 namespace ProjetoWeb
 {
@@ -39,16 +31,22 @@ namespace ProjetoWeb
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-            //Area para adicionar serviços
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            //Configurações de strings de connexão.
-            ConfigurarContexto<AppDbContext>(services ,"Default");
-            
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+                
+            });
+            //Serviços transitorios -------
+            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddTransient<IProfissionaisRepository, ProfissionaisRepository>();
+            services.AddTransient<IEspecialidadesRepository, EspecialidadesRepository>();
+            services.AddTransient<ILogradouroRepository, LogradouroRepository>();
+            //Serviços transitorios -------
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            ConfigurarContexto<AplicationDbContext>(services, "Default");
+
+            //services.AddScoped<>
+
         }
-        //Metodo Para Pegar a string de conexão com o nome da string de conexão.
         private void ConfigurarContexto<T>(IServiceCollection services, string nomeConexao) where T : DbContext
         {
             string connectionString = Configuration.GetConnectionString(nomeConexao);
@@ -57,7 +55,6 @@ namespace ProjetoWeb
                 options.UseSqlServer(connectionString)
             );
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -68,7 +65,6 @@ namespace ProjetoWeb
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -80,7 +76,7 @@ namespace ProjetoWeb
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Especialidades}/{action=Cadastro}/{id?}");
             });
         }
     }
