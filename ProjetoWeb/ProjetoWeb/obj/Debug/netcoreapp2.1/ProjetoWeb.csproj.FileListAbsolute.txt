@@ -163,11 +163,6 @@ D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Detalhes.g.cshtml.cs
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Editar.g.cshtml.cs
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Inicio.g.cshtml.cs
-D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Logradouro\Cadastro.g.cshtml.cs
-D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Logradouro\Deletar.g.cshtml.cs
-D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Logradouro\Detalhes.g.cshtml.cs
-D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Logradouro\Editar.g.cshtml.cs
-D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Logradouro\Inicio.g.cshtml.cs
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Profissionais\Cadastro.g.cshtml.cs
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Profissionais\Deletar.g.cshtml.cs
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Profissionais\Detalhes.g.cshtml.cs

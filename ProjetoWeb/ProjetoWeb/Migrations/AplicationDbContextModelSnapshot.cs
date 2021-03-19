@@ -39,53 +39,33 @@ namespace ProjetoWeb.Migrations
                     b.ToTable("especialidades");
                 });
 
-            modelBuilder.Entity("ProjetoWeb.Models.Logradouro", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Bairro")
-                        .IsRequired();
-
-                    b.Property<string>("CEP")
-                        .IsRequired()
-                        .HasMaxLength(8);
-
-                    b.Property<string>("Cidade")
-                        .IsRequired();
-
-                    b.Property<string>("Complemento")
-                        .IsRequired();
-
-                    b.Property<string>("Rua")
-                        .IsRequired();
-
-                    b.Property<string>("UF")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Logradouro");
-                });
-
             modelBuilder.Entity("ProjetoWeb.Models.Profissionais", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("EspecialidadeIDId");
+                    b.Property<string>("Bairro");
 
-                    b.Property<int>("LogradouroId");
+                    b.Property<int>("CEP");
+
+                    b.Property<string>("Cidade");
+
+                    b.Property<string>("Complemento")
+                        .IsRequired();
+
+                    b.Property<int?>("EspecialidadeIDId");
 
                     b.Property<DateTime>("Nascimento");
 
                     b.Property<string>("Nome")
                         .IsRequired();
 
-                    b.Property<string>("Telefone")
-                        .IsRequired();
+                    b.Property<string>("Rua");
+
+                    b.Property<string>("Telefone");
+
+                    b.Property<string>("UF");
 
                     b.Property<string>("WhatsApp")
                         .IsRequired();
@@ -108,8 +88,7 @@ namespace ProjetoWeb.Migrations
                 {
                     b.HasOne("ProjetoWeb.Models.Especialidades", "EspecialidadeID")
                         .WithMany()
-                        .HasForeignKey("EspecialidadeIDId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("EspecialidadeIDId");
                 });
 #pragma warning restore 612, 618
         }

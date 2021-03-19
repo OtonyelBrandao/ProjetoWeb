@@ -10,20 +10,41 @@ namespace ProjetoWeb.Models
     [Table("Profissionais")]
     public class Profissionais : BaseModel
     {
-
+        //informações basicas ------------------
         [Required]
         public string Nome { get; set; }
-        [ForeignKey("Logradouro")]
-        public int LogradouroId { get; set; }
         [Required]
+        public DateTime Nascimento { get; set; }
+        //informações basicas ------------------
+
+        //Contato   ----------------------------
+       
         public string Telefone { get; set; }
         [Required]
         public string WhatsApp { get; set; }
-        [Required]
-        public DateTime Nascimento { get; set;}
-        [Required]
+        //Contato   ----------------------------
+
+        //Especializações   --------------------
+        
         public Especialidades EspecialidadeID { get; set; }
-        [Required]
+        
         public List<Especialidades> Especialidades { get; set; }
+        //Especializações   --------------------
+
+        //Endereço  ----------------------------
+        
+        public string Rua { get; set; }
+        [Required]
+        public int CEP { get; set; }
+        [Required]
+        public string Complemento { get; set; }
+        
+        public string Bairro { get; set; }
+       
+        public string Cidade { get; set; }
+        
+        public string UF { get; set; }
+        //Endereço  ----------------------------
+
     }
 }

@@ -1,4 +1,6 @@
-﻿using ProjetoWeb.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using ProjetoWeb.Data;
 using ProjetoWeb.Models;
 using System;
 using System.Collections.Generic;
@@ -10,7 +12,7 @@ namespace ProjetoWeb.Repository
     public interface IEspecialidadesRepository
     {
         void Add(Especialidades Especialidades);
-        List<Especialidades> GetEspecialidades();
+        <IEnumerable<Especialidades> GetEspecialidades();
         List<Especialidades> GetEspecialidades(string Profissao, string Endereco);
         Especialidades GetEspecialidades(int Id);
         void Edit(Especialidades especialidades);
@@ -21,11 +23,11 @@ namespace ProjetoWeb.Repository
     {
         //Implementação de Dependeincia da classe AplicationDbContext
         //que serve como persistencia a dados
-        private readonly AplicationDbContext DB;
+        private AplicationDbContext db;
         //Construtor
-        public EspecialidadesRepository(AplicationDbContext dB)
+        public EspecialidadesRepository(AplicationDbContext db)
         {
-            DB = dB;
+            this.db = db;
         }
         //Construtor
         //CRUD INICIO
@@ -44,9 +46,10 @@ namespace ProjetoWeb.Repository
             throw new NotImplementedException();
         }
 
-        public List<Especialidades> GetEspecialidades()
+        public IEnumerable<Especialidades> GetEspecialidades()
         {
-            throw new NotImplementedException();
+            IEnumerable<Especialidades> especialidades =  db.especialidades;
+            return especialidades;
         }
 
         public List<Especialidades> GetEspecialidades(string Profissao, string Endereco)

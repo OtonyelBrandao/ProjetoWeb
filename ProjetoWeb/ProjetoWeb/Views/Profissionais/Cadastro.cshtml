@@ -12,11 +12,6 @@
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LogradouroId" class="control-label"></label>
-                <input asp-for="LogradouroId" class="form-control" />
-                <span asp-validation-for="LogradouroId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Telefone" class="control-label"></label>
                 <input asp-for="Telefone" class="form-control" />
                 <span asp-validation-for="Telefone" class="text-danger"></span>
@@ -25,6 +20,20 @@
                 <label asp-for="WhatsApp" class="control-label"></label>
                 <input asp-for="WhatsApp" class="form-control" />
                 <span asp-validation-for="WhatsApp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CEP" class="control-label"></label>
+                <input asp-for="CEP" class="form-control" />
+                <span asp-validation-for="CEP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Complemento" class="control-label"></label>
+                <input asp-for="Complemento" class="form-control" />
+                <span asp-validation-for="Complemento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select asp-for="EspecialidadeID" asp-items="@ViewBag.Especialidades">
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="Nascimento" class="control-label"></label>

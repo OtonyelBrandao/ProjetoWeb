@@ -39,7 +39,6 @@ namespace ProjetoWeb
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddTransient<IProfissionaisRepository, ProfissionaisRepository>();
             services.AddTransient<IEspecialidadesRepository, EspecialidadesRepository>();
-            services.AddTransient<ILogradouroRepository, LogradouroRepository>();
             //Serviços transitorios -------
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             ConfigurarContexto<AplicationDbContext>(services, "Default");
@@ -76,7 +75,7 @@ namespace ProjetoWeb
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Especialidades}/{action=Cadastro}/{id?}");
+                    template: "{controller=Profissionais}/{action=Cadastro}/{id?}");
             });
         }
     }

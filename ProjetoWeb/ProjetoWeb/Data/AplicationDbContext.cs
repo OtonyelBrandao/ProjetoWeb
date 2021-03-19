@@ -31,7 +31,6 @@ namespace ProjetoWeb.Data
         
         //public DbSet<Terapeuta> Terapeutas { get; set;}
         public DbSet<Profissionais> profissionais { get; set; }
-        public DbSet<Logradouro> logradouro { get; set; }
         public DbSet<Especialidades> especialidades { get; set; }
     }
 }
