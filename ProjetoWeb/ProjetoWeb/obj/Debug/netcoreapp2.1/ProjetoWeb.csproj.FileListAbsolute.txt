@@ -158,11 +158,6 @@ D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\bin\Debug\netcoreapp2.1
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.TagHelpers.input.cache
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.TagHelpers.output.cache
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.RazorCoreGenerate.cache
-D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Cadastro.g.cshtml.cs
-D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Deletar.g.cshtml.cs
-D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Detalhes.g.cshtml.cs
-D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Editar.g.cshtml.cs
-D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Inicio.g.cshtml.cs
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Profissionais\Cadastro.g.cshtml.cs
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Profissionais\Deletar.g.cshtml.cs
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Profissionais\Detalhes.g.cshtml.cs
@@ -219,3 +214,7 @@ C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb
 C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.Views.pdb
 C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.genruntimeconfig.cache
 C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\ProjetoWeb.csproj.CopyComplete
+D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Deletar.g.cshtml.cs
+D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Inicio.g.cshtml.cs
+D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Detalhes.g.cshtml.cs
+D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Cadastro.g.cshtml.cs

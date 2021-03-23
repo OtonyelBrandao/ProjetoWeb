@@ -53,8 +53,7 @@ namespace ProjetoWeb.Migrations
                     b.Property<string>("Cidade")
                         .IsRequired();
 
-                    b.Property<string>("Complemento")
-                        .IsRequired();
+                    b.Property<string>("Complemento");
 
                     b.Property<DateTime>("Nascimento");
 
@@ -81,7 +80,7 @@ namespace ProjetoWeb.Migrations
             modelBuilder.Entity("ProjetoWeb.Models.Especialidades", b =>
                 {
                     b.HasOne("ProjetoWeb.Models.Profissionais", "Profissionais")
-                        .WithMany("Especialidades")
+                        .WithMany("ProfissionaisEspecialidadesFK")
                         .HasForeignKey("ProfissionaisId");
                 });
 #pragma warning restore 612, 618

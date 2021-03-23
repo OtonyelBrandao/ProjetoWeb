@@ -74,7 +74,7 @@ namespace ProjetoWeb
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Profissionais}/{action=Cadastro}/{id?}");
+                    template: "{controller=Especialidades}/{action=Cadastro}/{id?}");
             });
         }
     }

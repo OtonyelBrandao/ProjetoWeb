@@ -7,20 +7,18 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ProjetoWeb.Data;
 using ProjetoWeb.Models;
-using ProjetoWeb.Repository;
 
 namespace ProjetoWeb.Controllers
 {
     public class EspecialidadesController : Controller
     {
         private readonly AplicationDbContext _context;
-        private readonly IEspecialidadesRepository especialidadesRepository;
 
-        public EspecialidadesController(AplicationDbContext context, IEspecialidadesRepository especialidadesRepository)
+        public EspecialidadesController(AplicationDbContext context)
         {
             _context = context;
-            this.especialidadesRepository = especialidadesRepository;
         }
+
         // GET: Especialidades
         public async Task<IActionResult> Inicio()
         {
@@ -118,7 +116,7 @@ namespace ProjetoWeb.Controllers
             return View(especialidades);
         }
 
-        // GET: Especialidades/Delete/5
+        // GET: Especialidades/Deletar/5
         public async Task<IActionResult> Deletar(int? id)
         {
             if (id == null)
@@ -136,7 +134,7 @@ namespace ProjetoWeb.Controllers
             return View(especialidades);
         }
 
-        // POST: Especialidades/Delete/5
+        // POST: Especialidades/Deletar/5
         [HttpPost, ActionName("Deletar")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeletarConfirmado(int id)

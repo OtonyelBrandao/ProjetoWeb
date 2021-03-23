@@ -95,7 +95,7 @@ namespace ProjetoWeb.Controllers
         {
             var listItems = especialidadesRepository.GetEspecialidades();
 
-            ViewBag.Especialidades =listItems.ToList();
+            ViewBag.Especialidades = listItems.ToList();
             return View();
         }
 
@@ -104,14 +104,15 @@ namespace ProjetoWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Cadastro([Bind("Nome,Nascimento,Telefone,WhatsApp,Rua,CEP,Complemento,Bairro,Cidade,UF,Id")] Profissionais profissionais,List<Especialidades> Especialidades)
+        public async Task<IActionResult> Cadastro([Bind("Nome,Nascimento,Telefone,WhatsApp,Rua,CEP,Complemento,Bairro,Cidade,UF,Id")] Profissionais profissionais,List<Int32> Especialidades)
         {
             var listItems = especialidadesRepository.GetEspecialidades();
 
             ViewBag.Especialidades = listItems.ToList();
-            foreach (var especialidade in especialidades)
+            foreach (var especialidade in Especialidades)
             {
-                especialidade.Profissionais = profissionais;
+                var Especialidade = await especialidadesRepository.GetEspecialidades(especialidade);
+                Especialidade.Profissionais = profissionais;
             }
 
             if (ModelState.IsValid)
