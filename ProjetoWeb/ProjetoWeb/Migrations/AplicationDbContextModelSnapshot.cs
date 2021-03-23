@@ -36,7 +36,7 @@ namespace ProjetoWeb.Migrations
 
                     b.HasIndex("ProfissionaisId");
 
-                    b.ToTable("especialidades");
+                    b.ToTable("Especialidades");
                 });
 
             modelBuilder.Entity("ProjetoWeb.Models.Profissionais", b =>
@@ -45,50 +45,44 @@ namespace ProjetoWeb.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Bairro");
+                    b.Property<string>("Bairro")
+                        .IsRequired();
 
                     b.Property<int>("CEP");
 
-                    b.Property<string>("Cidade");
+                    b.Property<string>("Cidade")
+                        .IsRequired();
 
                     b.Property<string>("Complemento")
                         .IsRequired();
-
-                    b.Property<int?>("EspecialidadeIDId");
 
                     b.Property<DateTime>("Nascimento");
 
                     b.Property<string>("Nome")
                         .IsRequired();
 
-                    b.Property<string>("Rua");
+                    b.Property<string>("Rua")
+                        .IsRequired();
 
-                    b.Property<string>("Telefone");
+                    b.Property<string>("Telefone")
+                        .IsRequired();
 
-                    b.Property<string>("UF");
+                    b.Property<string>("UF")
+                        .IsRequired();
 
                     b.Property<string>("WhatsApp")
                         .IsRequired();
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EspecialidadeIDId");
-
                     b.ToTable("Profissionais");
                 });
 
             modelBuilder.Entity("ProjetoWeb.Models.Especialidades", b =>
                 {
-                    b.HasOne("ProjetoWeb.Models.Profissionais")
+                    b.HasOne("ProjetoWeb.Models.Profissionais", "Profissionais")
                         .WithMany("Especialidades")
                         .HasForeignKey("ProfissionaisId");
-                });
-
-            modelBuilder.Entity("ProjetoWeb.Models.Profissionais", b =>
-                {
-                    b.HasOne("ProjetoWeb.Models.Especialidades", "EspecialidadeID")
-                        .WithMany()
-                        .HasForeignKey("EspecialidadeIDId");
                 });
 #pragma warning restore 612, 618
         }

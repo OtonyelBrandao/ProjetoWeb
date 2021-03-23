@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,8 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using ProjetoWeb.Data;
 using ProjetoWeb.Models;
 using ProjetoWeb.Repository;
-using System.Net.Http.Headers;
-using Newtonsoft.Json;
 
 namespace ProjetoWeb.Controllers
 {
@@ -31,13 +30,15 @@ namespace ProjetoWeb.Controllers
         }
         //Construtor    --------------------------------
 
+
         //Metodos   ------------------------------------
-        private Logradouro GetLogradouro(int CEP)
+        [HttpGet]
+        public IActionResult GetLogradouro(int CEP)
         {
             //Verificando se o CEP é Valido
             string VerificaCep = Convert.ToString(CEP);
 
-            if(VerificaCep.Length < 8 || VerificaCep.Length > 8)
+            if (VerificaCep.Length < 8 || VerificaCep.Length > 8)
             {
                 return null;
             }
@@ -47,16 +48,17 @@ namespace ProjetoWeb.Controllers
             var cliente = new HttpClient();
 
             //Formatando o Caminho da Requisição para Receber o CEP indicado no inicio do metodo
-            string url = string.Format("/ws/{0}/json/",CEP);
+            string url = string.Format("/ws/{0}/json/", CEP);
 
             //Fasendo uma Requisição utilizando a string já formatada
-            cliente.BaseAddress = new  Uri("https://viacep.com.br");
+            cliente.BaseAddress = new Uri("https://viacep.com.br");
             cliente.DefaultRequestHeaders.Clear();
             cliente.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("aplication/json"));
 
             var response = cliente.GetAsync(url).Result;
             var logradouro = response.Content.ReadAsAsync<Logradouro>().Result;
-            return logradouro;
+
+            return Json(logradouro);
         }
         //Metodos   ------------------------------------
 
@@ -68,6 +70,8 @@ namespace ProjetoWeb.Controllers
             return View(await profissionaisRepository.GetProfissionais());
         }
 
+
+        // GET: Profissionais/Details/5
         // GET: Profissionais/Details/5
         public async Task<IActionResult> Detalhes(int? id)
         {
@@ -77,7 +81,7 @@ namespace ProjetoWeb.Controllers
             }
             int Id = Convert.ToInt32(id);
             var profissionais = await profissionaisRepository.Get(Id);
-            
+
             if (profissionais == null)
             {
                 return NotFound();
@@ -89,6 +93,9 @@ namespace ProjetoWeb.Controllers
         // GET: Profissionais/Create
         public IActionResult Cadastro()
         {
+            var listItems = especialidadesRepository.GetEspecialidades();
+
+            ViewBag.Especialidades =listItems.ToList();
             return View();
         }
 
@@ -97,43 +104,24 @@ namespace ProjetoWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Cadastro([Bind("Id,Nome,CEP,Complemento,Telefone,WhatsApp,Nascimento,EspecialidadeID")] Profissionais profissionais)
+        public async Task<IActionResult> Cadastro([Bind("Nome,Nascimento,Telefone,WhatsApp,Rua,CEP,Complemento,Bairro,Cidade,UF,Id")] Profissionais profissionais,List<Especialidades> Especialidades)
         {
             var listItems = especialidadesRepository.GetEspecialidades();
-            
-            ViewBag.Especialidades = listItems.Select(c => new SelectListItem()
+
+            ViewBag.Especialidades = listItems.ToList();
+            foreach (var especialidade in especialidades)
             {
-                Text = c.NomeDaEspecialidade,
-                Value = c.Id.ToString()
+                especialidade.Profissionais = profissionais;
+            }
 
-            }).ToList();
-
-            //Teste de Modelstate
             if (ModelState.IsValid)
             {
-
-                //Instanciando Um Logradouro Valido
-                Logradouro logradouro;
-
-                //Preenchendo Logradouro Com a Api viacep
-                logradouro = GetLogradouro(profissionais.CEP);
-
-                //passando dados recebidos para profissionais
-                profissionais.Bairro = logradouro.bairro;
-                profissionais.Cidade = logradouro.localidade;
-                profissionais.UF = logradouro.uf;
-                profissionais.Rua = logradouro.logradouro;
-
-                //Cadastrando profissional na tabela do banco
-                //utilizando EF core 
-                profissionaisRepository.Add(profissionais);
-
-                //Redirecionando View
+                _context.Add(profissionais);
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Inicio));
             }
             return View(profissionais);
         }
-
 
         // GET: Profissionais/Edit/5
         public async Task<IActionResult> Editar(int? id)

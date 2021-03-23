@@ -44,7 +44,6 @@ namespace ProjetoWeb
             ConfigurarContexto<AplicationDbContext>(services, "Default");
 
             //services.AddScoped<>
-
         }
         private void ConfigurarContexto<T>(IServiceCollection services, string nomeConexao) where T : DbContext
         {

@@ -12,9 +12,9 @@ namespace ProjetoWeb.Repository
     public interface IEspecialidadesRepository
     {
         void Add(Especialidades Especialidades);
-        <IEnumerable<Especialidades> GetEspecialidades();
+        IEnumerable<Especialidades> GetEspecialidades();
         List<Especialidades> GetEspecialidades(string Profissao, string Endereco);
-        Especialidades GetEspecialidades(int Id);
+        Task<Especialidades> GetEspecialidades(int Id);
         void Edit(Especialidades especialidades);
         void Delete(int IDEspecialidades);
 
@@ -57,9 +57,10 @@ namespace ProjetoWeb.Repository
             throw new NotImplementedException();
         }
 
-        public Especialidades GetEspecialidades(int Id)
+        public async Task<Especialidades> GetEspecialidades(int Id)
         {
-            throw new NotImplementedException();
+            var especialidade = await db.especialidades.FindAsync(Id);
+            return especialidade;
         }
         //CRUD FIM
     }

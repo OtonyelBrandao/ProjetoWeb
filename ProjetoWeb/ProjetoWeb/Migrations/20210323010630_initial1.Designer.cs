@@ -10,8 +10,8 @@ using ProjetoWeb.Data;
 namespace ProjetoWeb.Migrations
 {
     [DbContext(typeof(AplicationDbContext))]
-    [Migration("20210317201211_AdicionandoLogradourEEspecialidades")]
-    partial class AdicionandoLogradourEEspecialidades
+    [Migration("20210323010630_initial1")]
+    partial class initial1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,39 +32,13 @@ namespace ProjetoWeb.Migrations
                     b.Property<string>("NomeDaEspecialidade")
                         .IsRequired();
 
-                    b.HasKey("Id");
-
-                    b.ToTable("especialidades");
-                });
-
-            modelBuilder.Entity("ProjetoWeb.Models.Logradouro", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Bairro")
-                        .IsRequired();
-
-                    b.Property<string>("CEP")
-                        .IsRequired()
-                        .HasMaxLength(8);
-
-                    b.Property<string>("Cidade")
-                        .IsRequired();
-
-                    b.Property<string>("Complemento")
-                        .IsRequired();
-
-                    b.Property<string>("Rua")
-                        .IsRequired();
-
-                    b.Property<string>("UF")
-                        .IsRequired();
+                    b.Property<int?>("ProfissionaisId");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Logradouro");
+                    b.HasIndex("ProfissionaisId");
+
+                    b.ToTable("Especialidades");
                 });
 
             modelBuilder.Entity("ProjetoWeb.Models.Profissionais", b =>
@@ -73,14 +47,29 @@ namespace ProjetoWeb.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("LogradouroId");
+                    b.Property<string>("Bairro")
+                        .IsRequired();
+
+                    b.Property<int>("CEP");
+
+                    b.Property<string>("Cidade")
+                        .IsRequired();
+
+                    b.Property<string>("Complemento")
+                        .IsRequired();
 
                     b.Property<DateTime>("Nascimento");
 
                     b.Property<string>("Nome")
                         .IsRequired();
 
+                    b.Property<string>("Rua")
+                        .IsRequired();
+
                     b.Property<string>("Telefone")
+                        .IsRequired();
+
+                    b.Property<string>("UF")
                         .IsRequired();
 
                     b.Property<string>("WhatsApp")
@@ -89,6 +78,13 @@ namespace ProjetoWeb.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Profissionais");
+                });
+
+            modelBuilder.Entity("ProjetoWeb.Models.Especialidades", b =>
+                {
+                    b.HasOne("ProjetoWeb.Models.Profissionais", "Profissionais")
+                        .WithMany("Especialidades")
+                        .HasForeignKey("ProfissionaisId");
                 });
 #pragma warning restore 612, 618
         }

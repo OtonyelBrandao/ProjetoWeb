@@ -10,8 +10,8 @@ using ProjetoWeb.Data;
 namespace ProjetoWeb.Migrations
 {
     [DbContext(typeof(AplicationDbContext))]
-    [Migration("20210319210550_AtualizacaoNaTabelaProfissionais")]
-    partial class AtualizacaoNaTabelaProfissionais
+    [Migration("20210323005906_Migrations")]
+    partial class Migrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,7 +38,7 @@ namespace ProjetoWeb.Migrations
 
                     b.HasIndex("ProfissionaisId");
 
-                    b.ToTable("especialidades");
+                    b.ToTable("Especialidades");
                 });
 
             modelBuilder.Entity("ProjetoWeb.Models.Profissionais", b =>
@@ -56,8 +56,6 @@ namespace ProjetoWeb.Migrations
                     b.Property<string>("Complemento")
                         .IsRequired();
 
-                    b.Property<int?>("EspecialidadeIDId");
-
                     b.Property<DateTime>("Nascimento");
 
                     b.Property<string>("Nome")
@@ -65,7 +63,8 @@ namespace ProjetoWeb.Migrations
 
                     b.Property<string>("Rua");
 
-                    b.Property<string>("Telefone");
+                    b.Property<string>("Telefone")
+                        .IsRequired();
 
                     b.Property<string>("UF");
 
@@ -73,8 +72,6 @@ namespace ProjetoWeb.Migrations
                         .IsRequired();
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EspecialidadeIDId");
 
                     b.ToTable("Profissionais");
                 });
@@ -84,13 +81,6 @@ namespace ProjetoWeb.Migrations
                     b.HasOne("ProjetoWeb.Models.Profissionais")
                         .WithMany("Especialidades")
                         .HasForeignKey("ProfissionaisId");
-                });
-
-            modelBuilder.Entity("ProjetoWeb.Models.Profissionais", b =>
-                {
-                    b.HasOne("ProjetoWeb.Models.Especialidades", "EspecialidadeID")
-                        .WithMany()
-                        .HasForeignKey("EspecialidadeIDId");
                 });
 #pragma warning restore 612, 618
         }

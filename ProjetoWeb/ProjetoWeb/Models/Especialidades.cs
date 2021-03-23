@@ -14,5 +14,9 @@ namespace ProjetoWeb.Models
         [Required]
         public string NomeDaEspecialidade { get; set; }
         //Informações Basicas -------------------------
+
+        //Relações ------------------------------------
+        public Profissionais Profissionais { get; set; }
+        //Relações ------------------------------------
     }
 }
