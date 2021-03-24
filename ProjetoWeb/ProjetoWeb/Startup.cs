@@ -40,10 +40,10 @@ namespace ProjetoWeb
             services.AddTransient<IProfissionaisRepository, ProfissionaisRepository>();
             services.AddTransient<IEspecialidadesRepository, EspecialidadesRepository>();
             //Serviços transitorios -------
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            ConfigurarContexto<AplicationDbContext>(services, "Default");
 
-            //services.AddScoped<>
+            //Configurando String de Conexão (...)
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            ConfigurarContexto<AplicationDbContext>(services, "SqlAzure");
         }
         private void ConfigurarContexto<T>(IServiceCollection services, string nomeConexao) where T : DbContext
         {
@@ -74,7 +74,7 @@ namespace ProjetoWeb
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Especialidades}/{action=Cadastro}/{id?}");
+                    template: "{controller=Profissionais}/{action=Inicio}/{id?}");
             });
         }
     }

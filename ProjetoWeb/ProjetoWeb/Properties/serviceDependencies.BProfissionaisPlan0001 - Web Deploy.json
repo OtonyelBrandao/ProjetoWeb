@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/bprofissionais/databases/bprofissionais",
+      "type": "mssql.azure",
+      "connectionId": "SqlAzure",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql1": {
+      "type": "mssql.onprem",
+      "connectionId": "Default",
+      "secretStore": null
+    }
+  }
+}

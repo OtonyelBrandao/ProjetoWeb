@@ -109,6 +109,10 @@
             "Microsoft.jQuery.Unobtrusive.Ajax": {
               "target": "Package",
               "version": "[3.2.6, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
             }
           },
           "imports": [

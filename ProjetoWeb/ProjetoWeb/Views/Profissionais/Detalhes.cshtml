@@ -1,4 +1,8 @@
 ﻿@model ProjetoWeb.Models.Profissionais
+@{ 
+    List<Especialidades> Especialidades = ViewBag.Especialidades;
+    var Nascimento = String.Format("{0:dd/MM/yyyy}", Model.Nascimento);
+}
 
 <div>
     <h4>Profissionais</h4>
@@ -26,7 +30,17 @@
             @Html.DisplayNameFor(model => model.Nascimento)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Nascimento)
+            @Html.DisplayFor(model => Nascimento)
+        </dd>
+        <dt>
+            Especialidades
+        </dt>
+        <dd>
+            @foreach (var Especialidade in Especialidades)
+            {
+                @Html.DisplayFor(model => Especialidade.NomeDaEspecialidade)
+            }
+
         </dd>
     </dl>
 </div>

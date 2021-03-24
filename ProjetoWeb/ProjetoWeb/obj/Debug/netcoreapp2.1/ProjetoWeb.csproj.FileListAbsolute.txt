@@ -196,7 +196,6 @@ C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb
 C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Cadastro.cshtml.g.cs
 C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Deletar.cshtml.g.cs
 C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Detalhes.cshtml.g.cs
-C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Editar.cshtml.g.cs
 C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Inicio.cshtml.g.cs
 C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Profissionais\Cadastro.cshtml.g.cs
 C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Profissionais\Deletar.cshtml.g.cs
@@ -218,3 +217,4 @@ D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Inicio.g.cshtml.cs
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Detalhes.g.cshtml.cs
 D:\Otonyel\Repositorios\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\Razor\Views\Especialidades\Cadastro.g.cshtml.cs
+C:\Users\Otonyel\Desktop\Otonyel\ProjetoWeb\ProjetowebSite\ProjetoWeb\ProjetoWeb\ProjetoWeb\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

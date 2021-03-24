@@ -81,7 +81,8 @@ namespace ProjetoWeb.Controllers
             }
             int Id = Convert.ToInt32(id);
             var profissionais = await profissionaisRepository.Get(Id);
-
+            var especialidadeprofissionais = especialidadesRepository.GetEspecialidades(profissionais);
+            ViewBag.Especialidades = especialidadeprofissionais.ToList();
             if (profissionais == null)
             {
                 return NotFound();
@@ -109,16 +110,29 @@ namespace ProjetoWeb.Controllers
             var listItems = especialidadesRepository.GetEspecialidades();
 
             ViewBag.Especialidades = listItems.ToList();
-            foreach (var especialidade in Especialidades)
-            {
-                var Especialidade = await especialidadesRepository.GetEspecialidades(especialidade);
-                Especialidade.Profissionais = profissionais;
-            }
-
             if (ModelState.IsValid)
             {
                 _context.Add(profissionais);
                 await _context.SaveChangesAsync();
+
+                //Relacionando
+                foreach (var especialidade in Especialidades)
+                {
+                    //Buscando Especialidade Atravez Do ID
+                    var Especialidade = await especialidadesRepository.GetEspecialidades(especialidade);
+                    //Criando Nova Especilaidade
+                    Especialidades EspecialidadesCad = new Especialidades();
+
+                    //Relacionando Especialidade
+                    EspecialidadesCad.Codigo = Especialidade.Codigo;
+                    EspecialidadesCad.NomeDaEspecialidade = Especialidade.NomeDaEspecialidade;
+                    EspecialidadesCad.Profissionais = profissionais;
+
+                    //Preenchendo Banco
+                    _context.Add(EspecialidadesCad);
+                    await _context.SaveChangesAsync();
+
+                }
                 return RedirectToAction(nameof(Inicio));
             }
             return View(profissionais);
@@ -127,12 +141,17 @@ namespace ProjetoWeb.Controllers
         // GET: Profissionais/Edit/5
         public async Task<IActionResult> Editar(int? id)
         {
+            
+            
+
             if (id == null)
             {
                 return NotFound();
             }
-
+            
             var profissionais = await _context.profissionais.FindAsync(id);
+            var especialidadeprofissionais = especialidadesRepository.GetEspecialidades(profissionais);
+            ViewBag.Especialidades = especialidadeprofissionais.ToList();
             if (profissionais == null)
             {
                 return NotFound();

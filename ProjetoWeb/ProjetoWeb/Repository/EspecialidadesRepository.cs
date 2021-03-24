@@ -13,6 +13,7 @@ namespace ProjetoWeb.Repository
     {
         void Add(Especialidades Especialidades);
         IEnumerable<Especialidades> GetEspecialidades();
+        IEnumerable<Especialidades> GetEspecialidades(Profissionais profissionais);
         List<Especialidades> GetEspecialidades(string Profissao, string Endereco);
         Task<Especialidades> GetEspecialidades(int Id);
         void Edit(Especialidades especialidades);
@@ -48,7 +49,8 @@ namespace ProjetoWeb.Repository
 
         public IEnumerable<Especialidades> GetEspecialidades()
         {
-            IEnumerable<Especialidades> especialidades =  db.especialidades;
+            var especialidades = db.especialidades.Where(e => e.Profissionais == null);
+
             return especialidades;
         }
 
@@ -61,6 +63,12 @@ namespace ProjetoWeb.Repository
         {
             var especialidade = await db.especialidades.FindAsync(Id);
             return especialidade;
+        }
+
+        public IEnumerable<Especialidades> GetEspecialidades(Profissionais profissionais)
+        {
+            var especialidades = db.especialidades.Where(e => e.Profissionais == profissionais);
+            return especialidades;
         }
         //CRUD FIM
     }
