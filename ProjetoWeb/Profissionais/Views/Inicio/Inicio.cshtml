@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Profissionais.Models.ModelsDb.ProfissionaisT>
+@{
+    ViewData["Title"] = "Inicio";
+    IEnumerable<SelectListItem> ListaDeCidades = ViewBag.Cidades;
+    IEnumerable<SelectListItem> ListaDeUFs = ViewBag.UFs;
+    IEnumerable<SelectListItem> ListaDeEspecialidades = ViewBag.Especialidades;
+    string src;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <main>
+                <div class="row" id="ListaProfissionais">
+                    @foreach (var item in Model)
+                    {
+                        //Blazor ---
+                        @if (@item.imagem == null)
+                        {
+                            src = "/Images/perfil_foto_padrão.jpg";
+                        }
+                        else
+                        {
+
+                            src = "/Imagens/VerImagem/"+@item.Id;
+                        }
+                        //HTML ---
+                        <div class="offset-1 offset-md-0 col-md-3 col-sm-6 col-10 " id="Profissionais">
+                            <div class="card mb-4 shadow-sm">
+                                <!--Imagem Perfil-->
+                                <img class="img-thumbnail imagemPerfil" src="@src" alt="" />
+                                <!--Imagem Perfil-->
+                                <div class="card-body" style="padding:8px;">
+                                    <p style="font-size:12px;margin:0;">
+                                        <b>Nome : </b>@item.Nome<br />
+                                        <b>Sobrenome : </b>@item.Sobrenome<br />
+                                        <b>Telefone : </b>@item.Telefone<br />
+                                        <b>Cidade : </b>@item.Cidade
+                                    </p>
+                                    <a href="/Inicio/Detalhes/@item.Id" class="btn-link LinkCard">Mais informações</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </main>
+        </div>
+        <div class="col-md-3">
+            <form asp-action="Inicio" method="post">
+                <div class="container form-group">
+                    <select class="form-control ls-select Especialidade Lista ListaEspecialidades" name="Especialidade" asp-items="ListaDeEspecialidades" id="ListaEspecialidades"></select>
+                    <select class="form-control Lista ListaUF" name="UF" id="ListaUF" style="margin-top:6px;">
+                        @foreach (var item in ListaDeUFs)
+                        {
+                            <option value="@item.Text" class="Estado">@item.Text</option>
+                        }
+                    </select>
+                    <select class="form-control Lista ListaCidade" name="Cidade" id="ListaCidade" style="margin-top:6px;">
+                        @foreach (var item in ListaDeCidades)
+                        {
+                            <option value="@item.Text" class="Cidade">@item.Text</option>
+                        }
+                    </select>
+                    <button type="button" id="buscar" class="btn btn-group btn-primary float-right" style="margin-top:6px;">Buscar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script type="text/javascript" src="~/js/InicioScriptsjs.js" asp-append-version="true"></script>
+}
+

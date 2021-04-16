@@ -1,0 +1,90 @@
+﻿@using Profissionais.Models.ModelsDb;
+@model Profissionais.Models.ModelsDb.ProfissionaisT
+
+@{
+    ViewData["Title"] = "Detalhes";
+        List<Especialidades> Especialidades = ViewBag.Especialidades;
+        var Nascimento = String.Format("{0:dd/MM/yyyy}", Model.Nascimento);
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Profissionais</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nascimento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nascimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WhatsApp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WhatsApp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rua)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rua)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Complemento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Complemento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UF)
+        </dd>
+        <dt>
+            Especialidades
+        </dt>
+        <dd>
+            @foreach (var Especialidade in Especialidades)
+            {
+                @Html.DisplayFor(model => Especialidade.NomeDaEspecialidade)
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Editar" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Inicio">Voltar a Lista</a>
+</div>

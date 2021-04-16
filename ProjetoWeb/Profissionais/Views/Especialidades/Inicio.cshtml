@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Profissionais.Models.ModelsDb.Especialidades>
+
+@{
+    ViewData["Title"] = "Inicio";
+    string Nome = "Nome Da Especialidade";
+}
+
+<h2>Inicio</h2>
+
+<p>
+    <a asp-action="Cadastro" class="btn btn-group btn-success">Cadastrar Nova especialidade</a>
+</p>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => Nome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeDaEspecialidade)
+            </td>
+            <td>
+                <a asp-action="Editar" asp-route-id="@item.Id">Editar</a> 
+                <a asp-action="Detalhes" asp-route-id="@item.Id">Detalhes</a> 
+                <a asp-action="Deletar" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Profissionais.Models.ModelsDb.ProfissionaisT>
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+    <h2>Inicio</h2>
+
+    <p>
+        <a asp-action="Cadastro" class="btn btn-group btn-primary">Cadastrar Novo Profissional</a>
+    </p>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WhatsApp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rua)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CEP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Complemento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bairro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cidade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UF)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @{
+                        var Nascimento = string.Format("{0:dd/MM/yyyy}", item.Nascimento);
+                    }
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Nascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WhatsApp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rua)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CEP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Complemento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bairro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UF)
+                    </td>
+                    <td>
+                        <a asp-action="Editar" asp-route-id="@item.Id">Editar</a> |
+                        <a asp-action="Detalhes" asp-route-id="@item.Id">Detalhes</a> |
+                        <a asp-action="Deletar" asp-route-id="@item.Id">Deletar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

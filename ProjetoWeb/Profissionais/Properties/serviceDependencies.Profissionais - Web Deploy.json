@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/bancodadosprofissionais/databases/ProfissionaisDb",
+      "type": "mssql.azure",
+      "connectionId": "AzureSql",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

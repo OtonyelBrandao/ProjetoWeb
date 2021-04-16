@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewData["Title"] = "LoginPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string Erro = ViewBag.Erro;
+
+}
+@section CSSinDev{
+    <link rel="stylesheet" href="~/css/UsuariosLogin.css" />
+    <style>
+        @@import url ('https://fonts.googleapis.com/css2? family = Noto + Serif + JP: wght @@ 500 & display = swap');
+
+        .iconeFormulario {
+            width: 17px;
+            height: auto;
+        }
+    </style>
+}
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6 col-12 col-sm-8">
+            <form asp-action="LoginPage" method="post" class="form-control col-12" style="width:500px;height:500px;">
+                <h1 class="form-text text-center TituloUsuariosLogin">LOGIN</h1>
+                <hr />
+                <div class="container form-group ConteudoUsuariosLogin" style="font-size:20px;font-family:'Noto Serif JP', serif;">
+                    <div>
+                        <label for="UserName">Nome De Usuario</label><br />
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><img src="~/images/icone_usuarioPNG.png"style="background:#e9ecef;" class="iconeFormulario" /></div>
+                            </div>
+                            <input type="text" id="UserName" class="form-control" name="Login" placeholder="Usuário" /><br />
+                        </div>
+                        <label for="Password">Senha</label><br />
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><img src="~/images/icone_senhaPNG.png"style="background:#e9ecef;" class="iconeFormulario" /></div>
+                            </div>
+                            <input type="password" id="Password" class="form-control" name="Senha" placeholder="Digite Sua Senha" /><br />
+                        </div>
+                        <div class="input-group" style="margin-bottom:15px;">
+                            <button type="submit" class="btn btn-primary btn-block ButtonUsuariosLogin">Logar</button>
+                        </div>
+                        <input type="checkbox" name="Lembrar" class="checkbox" id="Lembrar" />
+                        <label for="Lembrar" class="label">Lembrar de mim</label>
+
+                    </div>
+                    @if (Erro != null)
+                    {
+                        <div class="text-danger alert-danger" style="margin:15px;padding:5px;border:1px solid #FA8072;border-radius:5px;width:240px;font-size:15px;font-family:'Century Gothic';">
+                            @Erro
+                        </div>
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $('#Lembrar').click(function (e) {
+            if (this.checked) {
+                $(this).attr("value", "true");
+            } else {
+                $(this).attr("value", "false");
+            }
+        });
+    </script>
+}

@@ -1,0 +1,58 @@
+﻿@using Profissionais.Models.ModelsDb;
+@model Profissionais.Models.ModelsDb.ProfissionaisT
+
+@{
+    ViewData["Title"] = "Detalhes";
+    string Nascimento = string.Format("{0:dd/MM/yyyy}", Model.Nascimento);
+    IEnumerable<Especialidades> especialidades = ViewBag.Especialidades;
+    string NomeCompleto = Model.Nome + " " + Model.Sobrenome;
+    string Verificacao = null;
+}
+<div class="row container">
+    <div class="col-md-4">
+        <div style="width:275px; height:220px;">
+            @if (Model.imagem == null)
+    {
+            <img class="img-thumbnail imagemPerfilDetalhes" src="/Images/perfil_foto_padrão.jpg" alt="" />
+    }
+    else
+    {
+            <img class="img-thumbnail imagemPerfilDetalhes" src="/Imagens/VerImagem/@Model.Id" alt="" />
+    }
+
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="PerfilContentNome">
+            <hi class="PerfilNome">@NomeCompleto</hi>
+        </div>
+    </div>
+</div>
+<hr />
+<hr />
+<div class="PerfilConteudo">
+    <p class="PerfilFonte">
+        <label><b>Titulo :</b></label> @Model.Titulo<br />
+        <label><b>Nome :</b></label> @NomeCompleto<br />
+        <label><b>Tellefone :</b></label> @Model.Telefone<br />
+        <label><b>WhatsApp :</b></label> @Model.WhatsApp<br />
+        <label><b>Endereço :</b></label> @Model.Rua @Model.Complemento @Model.Bairro @Model.Cidade @Model.UF @Model.CEP<br />
+        <label><b>Especialidades :</b></label>
+        @foreach (var item in especialidades)
+        {
+            if(Verificacao == null){
+
+                string EspecialidadeComEspaco = item.NomeDaEspecialidade + " ";
+                @EspecialidadeComEspaco
+                Verificacao = EspecialidadeComEspaco;
+            }else{
+
+                string EspecialidadeComEspaco = " , "+item.NomeDaEspecialidade + " ";
+                @EspecialidadeComEspaco
+            }
+         }
+    </p>
+</div>
+<div>
+    <a asp-action="Inicio" class="btn btn-info">Voltar</a>
+</div>

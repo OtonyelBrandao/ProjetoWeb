@@ -1,0 +1,31 @@
+﻿@model Profissionais.Models.ModelsDb.Especialidades
+
+@{
+    ViewData["Title"] = "Detalhes";
+    string Nome = "Nome Da Especialidade";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Especialidades</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeDaEspecialidade)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Editar" asp-route-id="@Model.Id">Editar</a> 
+    <a asp-action="Inicio">Voltar a Lista</a>
+</div>
