@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SWqdFRI01iRtsXnSiquq8JkU65rC0AxbF+Tg+XAFPZUunrvkypj/tQXIeZWwIveSI3xnaWnrsWljgwoOKCppkQ==",
+  "dgSpecHash": "6cB2jMq10M5fHpjf3PkFen2/zzT/LfEK0pkWIFftgbwo0Kg4FDB6zGCGVK/wuarjLfo/c6Zg68X6fkAqo1JO/g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\VSC\\Profissionais\\Profissionais\\Profissionais\\Profissionais.csproj",
+  "projectFilePath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\Profissionais\\Profissionais.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\Otonyel\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",

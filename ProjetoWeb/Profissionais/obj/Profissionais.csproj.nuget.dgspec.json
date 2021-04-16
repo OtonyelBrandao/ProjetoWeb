@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Otonyel\\Desktop\\Otonyel\\VSC\\Profissionais\\Profissionais\\Profissionais\\Profissionais.csproj": {}
+    "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\Profissionais\\Profissionais.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Otonyel\\Desktop\\Otonyel\\VSC\\Profissionais\\Profissionais\\Profissionais\\Profissionais.csproj": {
+    "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\Profissionais\\Profissionais.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\VSC\\Profissionais\\Profissionais\\Profissionais\\Profissionais.csproj",
+        "projectUniqueName": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\Profissionais\\Profissionais.csproj",
         "projectName": "Profissionais",
-        "projectPath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\VSC\\Profissionais\\Profissionais\\Profissionais\\Profissionais.csproj",
+        "projectPath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\Profissionais\\Profissionais.csproj",
         "packagesPath": "C:\\Users\\Otonyel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\VSC\\Profissionais\\Profissionais\\Profissionais\\obj\\",
+        "outputPath": "C:\\Users\\Otonyel\\Desktop\\Otonyel\\ProjetoWeb\\ProjetowebSite\\ProjetoWeb\\ProjetoWeb\\Profissionais\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

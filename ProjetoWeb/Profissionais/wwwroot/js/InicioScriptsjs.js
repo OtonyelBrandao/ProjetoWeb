@@ -99,7 +99,7 @@ $("#buscar").click(function GetProfissionais() {
         IDList.innerHTML = null;
         result.forEach(function (item) {
             if (item.imagem == null) {
-                IDList.innerHTML += '<div class="col-md-4 offset-1 offset-md-0 col-md-6 col-sm-6 col-10 " id="Profissionais">' +
+                IDList.innerHTML += '<div class="offset-1 offset-md-0 col-md-3 col-sm-6 col-10" id="Profissionais">' +
                     '<div class="card mb-4 shadow-sm" >' +
                     '<!--Imagem Perfil-->' +
                     '<img class="img-thumbnail" src="/Images/perfil_foto_padrão.jpg" style="width: 250px; height: 200px;padding:0;" alt="" />' +
@@ -116,7 +116,7 @@ $("#buscar").click(function GetProfissionais() {
                     '</div>' +
                     '</div >'
             } else {
-                IDList.innerHTML += '<div class="offset-1 offset-md-0 col-md-6 col-sm-6 col-10 col-md-4" id="Profissionais">' +
+                IDList.innerHTML += '<div class="offset-1 offset-md-0 col-md-3 col-sm-6 col-10" id="Profissionais">' +
                     '<div class="card mb-4 shadow-sm" >' +
                     '<!--Imagem Perfil-->' +
                     '<img class="img-thumbnail imagemPerfil" src="/Imagens/VerImagem/' + item.id + '" alt="" />' +
